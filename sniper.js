@@ -56,7 +56,17 @@ javascript:(function() {
 				shotPower *= 2;
 				cdLength *= 2;
 			}
-		},
+		}
+	    ];
+	t.reverse();
+	for(let i = 0; i < tech.tech.length; i++) {
+		if(tech.tech[i].name === 'spherical harmonics') {
+			for(let j = 0; j < t.length; j++) {
+				tech.tech.splice(i, 0, t[j]);
+			}
+			break;
+		}
+	}
 	b.guns.push(e);
 	const gunArray = b.guns.filter(
 	(obj, index, self) =>
