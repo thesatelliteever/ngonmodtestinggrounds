@@ -10,8 +10,8 @@ javascript:(function() {
         canSRFire: true,
 	cooldown: 0,
 	cdLength: 60,
-	shotRadius: 100,
-	shotPower: 5,
+	shotRadius: 50,
+	shotPower: 10,
         fire() {
 	    this.ammo++;
             if (this.canSRFire) {
