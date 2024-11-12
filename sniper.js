@@ -8,8 +8,8 @@ javascript:(function() {
         have: false,
         cycle: 0,
         canSRFire: true,
-	cooldown: 0
-        SR() {
+	cooldown: 0,
+        fire() {
             if (this.canSRFire) {
                 b.explosion(simulation.mouseInGame, 10);
 		this.canSRFire = false;
@@ -20,10 +20,7 @@ javascript:(function() {
 		    this.canSRFire = true;
 		};
 	    };
-        },
-        fire() {
-            this.SR();
-        },
+        }
     };       
 	b.guns.push(e);
 	const gunArray = b.guns.filter(
