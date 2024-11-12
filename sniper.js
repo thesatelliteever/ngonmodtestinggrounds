@@ -9,20 +9,23 @@ javascript:(function() {
         cycle: 0,
         canSRFire: true,
 	cooldown: 0,
+	cdLength: 60,
+	shotRadius: 100,
+	shotPower: 5,
         fire() {
 	    this.ammo++;
             if (this.canSRFire) {
 		this.ammo--;
-                for (let index = 0; index < 5; index++) {
-    			b.explosion(simulation.mouseInGame, 100);
-		}
+                for (let index = 0; index < this.shotPower; index++) {
+    			b.explosion(simulation.mouseInGame, this.shotRadius);
+		};
 		this.canSRFire = false;
 	    };
         },
 	do() {
                 if (!this.canSRFire) {
 		    this.cooldown++;
-		    if (this.cooldown > 60) {
+		    if (this.cooldown > this.cdLength) {
 		        this.cooldown = 0;
 		        this.canSRFire = true;
 	    	    };
