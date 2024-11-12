@@ -32,41 +32,6 @@ javascript:(function() {
 		};
         },
     };       
-    const t = [
-		{
-			name: "argon scope",
-			link: `<a target="_blank" href='https://en.wikipedia.org/wiki/Forging' class="link">drawn out</a>`,
-			descriptionFunction() {
-				return `<strong>+100%</strong> sniper rifle firing speed<br><strong>-50%</strong> sniper rifle <strong class="color-d">damage</strong>`
-			},
-			isGunTech: true,
-			maxCount: 1,
-			count: 0,
-			frequency: 2,
-			frequencyDefault: 2,
-			allowed() {
-				return tech.haveGunCheck("sniper rifle")
-			},
-			requires: "sniper rifle",
-			effect() {
-				shotPower /= 2;
-				cdLength /= 2;
-			},
-			remove() {
-				shotPower *= 2;
-				cdLength *= 2;
-			}
-		}
-	    ];
-	t.reverse();
-	for(let i = 0; i < tech.tech.length; i++) {
-		if(tech.tech[i].name === 'spherical harmonics') {
-			for(let j = 0; j < t.length; j++) {
-				tech.tech.splice(i, 0, t[j]);
-			}
-			break;
-		}
-	}
 	b.guns.push(e);
 	const gunArray = b.guns.filter(
 	(obj, index, self) =>
