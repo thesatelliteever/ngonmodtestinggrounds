@@ -22,6 +22,7 @@ javascript:(function() {
 	    };
         },
 	do() {
+
 	}
     };       
 	b.guns.push(e);
