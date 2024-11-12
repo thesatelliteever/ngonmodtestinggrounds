@@ -7,7 +7,6 @@ javascript:(function() {
         defaultAmmoPack: 3,
         have: false,
         cycle: 0,
-        lastAngle: 0,
         wasSROn: false,
         isSROn: false,
         canSRFire: true,
