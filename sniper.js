@@ -7,25 +7,22 @@ javascript:(function() {
         defaultAmmoPack: 3,
         have: false,
         cycle: 0,
-        wasSROn: false,
-        isSROn: false,
         canSRFire: true,
 	cooldown: 0
         SR() {
             if (this.canSRFire) {
                 b.explosion(simulation.mouseInGame, 10);
 		this.canSRFire = false;
-	    };
-        },
-        fire() {
-            this.SR();
-	    if (!this.canSRFire) {
+	    } else {
 		this.cooldown++;
 		if (this.cooldown > 60) {
 		    this.cooldown = 0;
 		    this.canSRFire = true;
 		};
 	    };
+        },
+        fire() {
+            this.SR();
         },
     };       
 	b.guns.push(e);
