@@ -10,7 +10,9 @@ javascript:(function() {
         canSRFire: true,
 	cooldown: 0,
         fire() {
+	    this.ammo++;
             if (this.canSRFire) {
+		this.ammo--;
                 b.explosion(simulation.mouseInGame, 100);
 		this.canSRFire = false;
 	    };
