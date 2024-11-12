@@ -11,19 +11,20 @@ javascript:(function() {
         wasSROn: false,
         isSROn: false,
         canSRFire: true,
+	cooldown: 0
         SR() {
-            if (this.cansRFire) {
+            if (this.canSRFire) {
                 b.explosion(simulation.mouseInGame, 10);
-		this.canSRFire = false
+		this.canSRFire = false;
 	    };
         },
         fire() {
             this.SR();
 	    if (!this.canSRFire) {
-		this.cycle++
-		if (this.cycle > 60) {
-		    this.cycle = 0
-		    this.canSRFire = true
+		this.cooldown++;
+		if (this.cooldown > 60) {
+		    this.cooldown = 0;
+		    this.canSRFire = true;
 		};
 	    };
         },
