@@ -53,9 +53,9 @@ javascript:(function() {
 		index === self.findIndex((item) => item.name === obj.name)
 	);
 	const techArray = tech.tech.filter(
-		(obj, index, self) =>
-			index === self.findIndex((item) => item.name === obj.name)
-		);
+	(obj, index, self) =>
+		index === self.findIndex((item) => item.name === obj.name)
+	);
 	b.guns = gunArray;
 	tech.tech = techArray;
 	console.log("%cSniper mod successfully installed", "color: gray");
