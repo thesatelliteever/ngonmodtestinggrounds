@@ -13,7 +13,9 @@ javascript:(function() {
 	    this.ammo++;
             if (this.canSRFire) {
 		this.ammo--;
-                b.explosion(simulation.mouseInGame, 100);
+                for (let index = 0; index < 5; index++) {
+    			b.explosion(simulation.mouseInGame, 100);
+		}
 		this.canSRFire = false;
 	    };
         },
