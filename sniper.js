@@ -20,7 +20,9 @@ javascript:(function() {
 		    this.canSRFire = true;
 		};
 	    };
-        }
+        },
+	do() {
+	}
     };       
 	b.guns.push(e);
 	const gunArray = b.guns.filter(
