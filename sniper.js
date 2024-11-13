@@ -53,12 +53,12 @@ javascript:(function() {
 			},
 			requires: "sniper rifle",
 			effect() {
-				tech.SRLength *= 0.5;
-				tech.SRRadius *= 0.5;
+				b.SRLength *= 0.5;
+				b.SRRadius *= 0.5;
 			},
 			remove() {
-				tech.SRLength *= 2;
-				tech.SRRadius *= 2;
+				b.SRLength *= 2;
+				b.SRRadius *= 2;
 			}
 		},
 		{
@@ -76,12 +76,12 @@ javascript:(function() {
 			},
 			requires: "sniper rifle",
 			effect() {
-				tech.SRLength *= 2;
-				tech.SRPower *= 2;
+				b.SRLength *= 2;
+				b.SRPower *= 2;
 			},
 			remove() {
-				tech.SRLength *= 0.5;
-				tech.SRPower *= 0.5;
+				b.SRLength *= 0.5;
+				b.SRPower *= 0.5;
 			}
 		},
     ];
