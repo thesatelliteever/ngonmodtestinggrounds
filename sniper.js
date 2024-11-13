@@ -9,7 +9,7 @@ javascript:(function() {
         cycle: 0,
         canSRFire: true,
 	cooldown: 0,
-	SRLength = 60,
+	SRLength: 60,
 	SRRadius: 50,
 	SRPower: 10,
         fire() {
