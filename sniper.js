@@ -9,9 +9,9 @@ javascript:(function() {
         cycle: 0,
         canSRFire: true,
 	cooldown: 0,
-	SRLength: 60,
-	SRRadius: 50,
-	SRPower: 10,
+	tech.SRLength: 60,
+	tech.SRRadius: 50,
+	tech.SRPower: 10,
         fire() {
 	    this.ammo++;
             if (this.canSRFire) {
@@ -53,12 +53,12 @@ javascript:(function() {
 			},
 			requires: "sniper rifle",
 			effect() {
-				b.SRLength *= 0.5;
-				b.SRRadius *= 0.5;
+				tech.SRLength *= 0.5;
+				tech.SRRadius *= 0.5;
 			},
 			remove() {
-				b.SRLength *= 2;
-				b.SRRadius *= 2;
+				tech.SRLength *= 2;
+				tech.SRRadius *= 2;
 			}
 		},
 		{
@@ -76,12 +76,12 @@ javascript:(function() {
 			},
 			requires: "sniper rifle",
 			effect() {
-				b.SRLength *= 2;
-				b.SRPower *= 2;
+				tech.SRLength *= 2;
+				tech.SRPower *= 2;
 			},
 			remove() {
-				b.SRLength *= 0.5;
-				b.SRPower *= 0.5;
+				tech.SRLength *= 0.5;
+				tech.SRPower *= 0.5;
 			}
 		},
     ];
